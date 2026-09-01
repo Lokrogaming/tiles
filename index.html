@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>Prisma Match</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <header class="hud">
+      <div class="panel score-panel">
+        <div class="score-col">
+          <span class="mono-label">Score</span>
+          <span id="scoreValue" class="score-value">0</span>
+        </div>
+        <div class="score-divider"></div>
+        <div class="score-col score-col-hi">
+          <span class="mono-label">Highscore</span>
+          <span id="highscoreValue" class="score-value hi">0</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel quest-panel" id="questPanel">
+      <div class="quest-top">
+        <span class="mono-label">Quest</span>
+        <span id="questCount" class="quest-count">0 / 0</span>
+      </div>
+      <div class="quest-body">
+        <div id="questIcon" class="quest-icon"><div class="gem-shape"></div></div>
+        <div class="quest-progress-track">
+          <div id="questProgressFill" class="quest-progress-fill"></div>
+        </div>
+      </div>
+    </section>
+
+    <main class="board-wrap">
+      <div id="board" class="board"></div>
+      <div id="popupLayer" class="popup-layer"></div>
+      <div id="boardMessage" class="board-message"></div>
+    </main>
+
+    <footer class="panel boosters-panel">
+      <button class="booster-btn" data-booster="hammer" id="btnHammer">
+        <span class="booster-icon">🔨</span>
+        <span class="booster-count" id="countHammer">0</span>
+      </button>
+      <button class="booster-btn" data-booster="rocket" id="btnRocket">
+        <span class="booster-icon">🚀</span>
+        <span class="booster-count" id="countRocket">0</span>
+      </button>
+      <button class="booster-btn" data-booster="bomb" id="btnBomb">
+        <span class="booster-icon">💣</span>
+        <span class="booster-count" id="countBomb">0</span>
+      </button>
+      <button class="booster-btn" data-booster="rainbow" id="btnRainbow">
+        <span class="booster-icon">🌈</span>
+        <span class="booster-count" id="countRainbow">0</span>
+      </button>
+    </footer>
+
+    <div id="questCompleteOverlay" class="overlay hidden">
+      <div class="overlay-card">
+        <div class="overlay-badge">Quest abgeschlossen!</div>
+        <div class="overlay-score">
+          <span class="mono-label">Erreichter Score</span>
+          <span id="finalScore" class="overlay-score-value">0</span>
+        </div>
+        <div id="newRecordTag" class="new-record hidden">Neuer Highscore!</div>
+        <button id="btnNewQuest" class="primary-btn">Neue Quest</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
